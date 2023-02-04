@@ -1,15 +1,8 @@
 @charset "UTF-8";
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-ul, ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
+*{margin: 0px; padding: 0px;}
+ul,ol,li{list-style: none;}
+a {text-decoration: none;}
 
 .wrap {
   width: 600px;
@@ -17,31 +10,22 @@ a {
   border: 10px solid red;
 }
 .wrap::after{
-  content: '';
-  display: block;
-  clear: both;
+  content: ''; display: block; clear: both;
 }
-.wrap .box1{
-  width: 200PX;
-  height: 400px;
-  background: #555;
+.wrap .box1 {
+  width: 200px; height: 200px;
+  background: #666;
   float: left;
 }
-.wrap .box2{
-  width: 200px;
-  height: 200px;
-  background: #777;
-  float: left;
+.wrap .box2 {
+  width: 200px; height: 200px;
+  background: #888; float: left;
 }
 .wrap .box3 {
-  width: 200px;
-  height: 200px;
-  background: #999;
-  float: left;
+  width: 200px; height: 400px;
+  background: #aaa; float: right;
 }
 .wrap .box4 {
-  width: 400px;
-  height: 200px;
-  background: #bbb;
-  float: left;
+  width: 400px; height: 200px;
+  background: #ccc; float: left;
 }
