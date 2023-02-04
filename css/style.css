@@ -1,31 +1,59 @@
 @charset "UTF-8";
 
 *{margin: 0px; padding: 0px;}
-ul,ol,li{list-style: none;}
-a {text-decoration: none;}
+ul,ol,li{ list-style: none;}
+a{text-decoration: none;}
 
-.wrap {
-  width: 600px;
+.wrap{
+  width: 800px;
+  border: 5px solid red;
   margin: 50px auto;
-  border: 10px solid red;
 }
+
 .wrap::after{
   content: ''; display: block; clear: both;
 }
-.wrap .box1 {
+
+.wrap .left {
+  width: 200px;
+  height: 600px;
+  background: orange;
+  float: left;
+} 
+.wrap .left div{
   width: 200px; height: 200px;
+}
+
+.wrap .left .box1 {
+  background: #222;
+}
+.wrap .left .box2 {
+  background: #444;
+}
+.wrap .left .box3 {
   background: #666;
+}
+.wrap .center {
+  width: 400px;
+  height: 600px;
+  background: #bbb;
   float: left;
 }
-.wrap .box2 {
+.wrap .right div {
   width: 200px; height: 200px;
-  background: #888; float: left;
 }
-.wrap .box3 {
-  width: 200px; height: 400px;
-  background: #aaa; float: right;
+.wrap .right {
+  width: 200px;
+  height: 600px;
+  background: pink;
+  float: left;
 }
-.wrap .box4 {
-  width: 400px; height: 200px;
-  background: #ccc; float: left;
+.wrap .right .box1 {
+  background: #222;
+}
+.wrap .right .box2 {
+  background: #444;
+}
+.wrap .right .box3 {
+background: #666;
 }
