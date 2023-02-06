@@ -5,24 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>float 응용3</title>
+  <title>마진역상속의 이해 및 해결 </title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="left">
-      <div class="box1"></div>
-      <div class="box2"></div>
-      <div class="box3"></div>
-    </div>
-    <div class="center"></div>
-    <div class="right">
-      <div class="box1"></div>
-      <div class="box2"></div>
-      <div class="box3"></div>
-    </div>
+  <div>
+    <div id="wrap"></div>
   </div>
+  <!--
+    마진 역상속 
+    - 부모 블록 요소에서 찻번째 자식 블록요소에 margin-top이 설정되면 마진 값이 부모 블럭 요소로 역상속 됨 
+
+    해결 방법 1 - 첫번째 자식  블록 요소에 margin-top을 설정해서 위아래 여백을 띄어준다 (추천)
+    해결 방법 2 - 부모 요소에 border값을 설정하면 역상속이 해결 된다 (마진 역상속이라는 버그를 버그로 극복하는 방법으로 비추천)
+  -->
 </body>
 
 </html>
