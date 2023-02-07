@@ -57,7 +57,7 @@ a{text-decoration: none;}
 
 #box .inner .wrap article:nth-of-type(2),
 #box .inner .wrap article:nth-of-type(3){
-  width: 380px; height: 140px; margin-bottom: 10px;
+  width: 380px; height: 140px; margin-bottom: 20px;
 }
 #box .inner .wrap article:nth-of-type(2) h2,
 #box .inner .wrap article:nth-of-type(3) h2{
