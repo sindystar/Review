@@ -1,35 +1,23 @@
 @charset "utf-8";
 
-*{
-  margin: 0px;
-  padding: 0px;
-}
-ul,ol,li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
 
 #box{
-  width: 100%;
-  padding: 180px 0px 150px;
+  width: 100%; padding: 180px 0px 150px;
 }
+
 #box .inner {
-  width: 1180px;
-  margin: 0px auto;
-  position: relative;
+  width: 1180px; margin: 0 auto ; position: relative;
 }
+
 #box .inner h1 {
   font: bold 22px/1 'arial';
-  /* font-weight:bold;
-  font-size:22px;
-  line-height:1;
-  font-family:'arial';
-  */
   color: #555;
-  text-align: center;
-  margin-bottom: 80px;
+  border-bottom: 2px solid #888;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #box .inner .wrap {
@@ -39,28 +27,43 @@ a {
   content: ''; display: block; clear: both;
 }
 #box .inner .wrap article {
-  width: 380px;
-  border: 1px solid #888;
-  box-sizing: border-box;
-  float: left;
+  float: left; padding: 40px; background-color: #777;
+}
+#box .inner .wrap article:nth-of-type(1){
+  width: 780px; height: 300px;
   margin-right: 20px;
-  padding: 20px;
 }
-#box .inner .wrap article:last-of-type {
-  margin-right: 0px;
+#box .inner .wrap article:nth-of-type(1) h2{
+  font: bold 14px/1 'arial'; color: #111; margin-bottom: 10px;
 }
-#box .inner .wrap article .pic {
-  width: 100%;
-  height: 200px;
-  background-color: #555;
-  margin-bottom: 20px;
+#box .inner .wrap article:nth-of-type(1) h3{
+  font: bold 30px/1.1 'arial'; color: #fff;
 }
-#box .inner .wrap article h2 {
-  font: bold 18px/1 'arial';
-  color: #555;
-  margin-bottom: 10px;
+#box .inner .wrap article:nth-of-type(1) h4 {
+  font: bold 30px/1.1 'arial'; color:  #bbb; margin-bottom: 50px;
 }
-#box .inner .wrap article a {
-  font: bold 12px/1 'arial';
-  color: #333;
+#box .inner .wrap article:nth-of-type(1) .btn {
+  display: block;
+  width: 150PX;
+  height: 40px;
+  background-color: #bbb;
+  font: bold 12px/40px 'arial'; color: #666; text-align: center;
+  border-radius: 20px
+}
+/* 블록 요소는 너비 높이값을 지정해줄수 있다
+반면 인라인 요소는 자신이 너비값만 가질수 있다
+따라서 a태그를 버튼으로 만들려면 블록 요소로 변환해줘야 한다 
+*/
+
+#box .inner .wrap article:nth-of-type(2),
+#box .inner .wrap article:nth-of-type(3){
+  width: 380px; height: 140px; margin-bottom: 10px;
+}
+#box .inner .wrap article:nth-of-type(2) h2,
+#box .inner .wrap article:nth-of-type(3) h2{
+  font: bold 20px/1 'arial'; color: #fff; margin-bottom: 10px;
+}
+#box .inner .wrap article:nth-of-type(2) p,
+#box .inner .wrap article:nth-of-type(3) p{
+  font: bold 14px/1.2 'arial'; color: #bbb;
 }
