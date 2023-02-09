@@ -1,117 +1,39 @@
 @charset "UTF-8";
 
 *{
-  margin: 0px; padding: 0px; box-sizing: border-box;
+  margin: 0px; padding: 0px; box-sizing: border-box; 
 }
-ul,ol,li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-.hidden {
-  position: absolute; top: -9999999999999px; opacity: 0;
+ul,ol,li{list-style:none ;}
+a{
+  text-align: center;
 }
 
-#box {
+div {
   width: 100%; height: 100vh;
-  /* 전체화면 공식 */
-  background-color: #efefef;
-  padding: 150px 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+/*
 
-#box .inner {
-  width: 1180px;
-  margin: 0 auto;
-  position: relative;
+cover :배경 이미지를 자를 지언정 여백없이 프레임 안에 꽉 채우되 기준이 좌우에 맞춰서 
+contain : 좌우 여백이 남을 지언정 자르지 않고 프레임 안에 위아래를 맞춰서 채워 넣어줌
+background-attendment : fixed ;
+이미지가 물리적으로 어느 프레임에 배치되어 있다고 해도 무조건 브라우저 기준으로 위치가 고정됨 
+*/
+.box1{
+  background-image: url(img/pic1.jpg);
 }
-#box .inner .wrap{
-  width: 100%;
+.box2{
+  background-image: url(img/pic2.jpg);
 }
-#box .inner .wrap::after {
-  content: ''; display: block; clear: both;
+.box3{
+  background-image: url(img/pic3.jpg);
 }
-#box .inner >.wrap >article{
-  width: 280px; height: 200px; float: left;
-  margin-right: 20px; background-color: #fff;
-  /*  #ffffff = #fff
-    #000000 = #000
-    #ㅁㅁ/ㅁㅁ/ㅁㅁ = 앞에 두개는 빨강색, 가운데 두개는 녹색, 끝에 두개는 파랑색 
-
-    #ff0000 => 빨강 
-    #00mff00 => 녹색 
-  */
-  padding: 35px 30px;
-  position: relative;
+.box4{
+  background-image: url(img/pic4.jpg);
 }
-#box .inner >.wrap >article:last-of-type {
-  margin-right: 0px;
-}
-
-#box .inner >.wrap >article:nth-of-type(1) h2 {
-  font: 20px/1 'arial';
-  color: #444;
-  margin-bottom: 20px;
-  text-align: center;
-}
-#box .inner >.wrap >article:nth-of-type(1) h3 {
-  font: bold 15px/1 'arial';
-  color: #777;
-  margin-bottom: 5px;
-  text-align: center;
-}
-#box .inner >.wrap >article:nth-of-type(1) p {
-  font: 12px/1.2 'arial';
-  color: #888;
-  margin-bottom: 20px;
-  text-align: center;
-}
-#box .inner >.wrap >article:nth-of-type(1) .btn{
-  display: block;
-  width: 100%;
-  height: 30px;
-  border: 1px solid #bbb;
-  font: bold 12px/30px 'arial';
-  color: #666;
-  text-align: center;
-}
-#box .inner >.wrap >article:nth-of-type(2) h2{
-  font: 20px/1 'arial';
-  color: #444;
-  margin-bottom: 30px;
-  text-align: center;
-} 
-/*플롯해제를 안하는 경우 그다음 컨텐츠가 더이상 없어서 레이아웃이 꼬일 염려가 없는 경우 */
-#box .inner >.wrap >article:nth-of-type(2) article {
-  float: left; width: 33.333%; text-align: center;
-  padding: 0px 10px;
-}
-#box .inner >.wrap >article:nth-of-type(2) article a {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  border-radius: 50%;
-  font-size: 20px;
-  line-height: 50px;
-  color: #999;
-}
-#box .inner >.wrap >article:nth-of-type(2) article a strong {
-  font-size: 14px; color: #555;
-}
-#box .inner >.wrap >article:nth-of-type(3) h2,
-#box .inner >.wrap >article:nth-of-type(4) h2 {
-  font: bold 20px/1 'arial';
-  color: #444;
-  margin-bottom: 24px;
-}
-
-#box .inner >.wrap >article:nth-of-type(3) ul li,
-#box .inner >.wrap >article:nth-of-type(4) ul li {
-  margin-bottom: 2px;
-}
-#box .inner >.wrap >article:nth-of-type(3) ul li a,
-#box .inner >.wrap >article:nth-of-type(4) ul li a {
-  font: 14px/1 'arial';
-  color: #555;
+.box5{
+  background-image: url(img/pic5.jpg);
 }
