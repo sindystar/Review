@@ -5,18 +5,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>배경이미지 크기지정</title>
+  <title>vw,vh,vmin,vmax</title>
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <div class="box1"></div>
-  <div class="box2"></div>
-  <div class="box3"></div>
-  <div class="box4"></div>
-  <div class="box5"></div>
+  <div class="box1">
+    <span>Hello</span>
+  </div>
+  <div class="box2">
+    <span>Hello</span>
+  </div>
+  <div class="box3">
+    <span>hello</span>
+  </div>
 
 </body>
+
+<!--
+  vw = viewport width 브라우저의 가로폭을 백등분한 단위
+  vh = viewport height 브라우저의 세로폭을 백등분한 단위
+  
+  vmin : 브라우저의 작은폭(가로나 세로중)을 기준으로 백등분한 단위
+  vmax : 브라우저의 큰폭을 기준으로 백등분한 단위
+
+  반응형 적용시 사용하는데 vmax 데스크탑 크기에서 적용
+  반응형 적용시 사용하는데 vmin 모바일 크기에서 사용 
+  
+  풀스크린 만드는 공식 
+  width : 100%;
+  height : 100vh;
+-->
 
 </html>
