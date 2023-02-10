@@ -14,7 +14,7 @@ section{
   margin: 50px auto;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 10px 10px 30px rgba(0,0,0,1);
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
 }
 /* nav영역 */
 section .menu{
@@ -123,19 +123,19 @@ section .others a.on{
   opacity: 1;
 }
 
-section.others a:nth-of-type(1){
+section .others a:nth-of-type(1){
   background-color: #35e0f7;
   box-shadow: 5px 5px 10px rgba(75,255,255,0.7);
 }
-section.others a:nth-of-type(2){
+section .others a:nth-of-type(2){
   background-color: #55f5cd;
   box-shadow: 5px 5px 10px rgba(85,245,178,0.7);
 }
-section.others a:nth-of-type(3){
+section .others a:nth-of-type(3){
   background-color: #ff80df;
   box-shadow: 5px 5px 10px rgba(255,128,223,0.7);
 }
-section.others a:nth-of-type(4){
+section .others a:nth-of-type(4){
   background-color: #a794fd;
   box-shadow: 5px 5px 10px rgba(167,148,253,0.7);
 }
@@ -163,7 +163,7 @@ section.others a:nth-of-type(4){
 }
 
 .member3{
-  background-color: #ffff3fd;
+  background-color: #fff3fd;
 }
 .member3 section .profile img{
   box-shadow: 5px 15px 30px rgba(252,99,214,0.8);
