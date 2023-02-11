@@ -5,33 +5,58 @@ ul,ol,li{ list-style: none;}
 a{ text-decoration: none;}
 
 section{
-  width: 100%; height: 100vh;
-  background-color: #efefef;
-  position: relative;
+  width: 100%;
+}
+section article {
+  width: 200px; height: 200px;
+  border: 5px solid #000;
+  float: left; margin: 100px; position: relative;
 }
 
-section div{
-  width: 100px; height: 40px;
-  position: absolute;
-  top: 50%;
-  margin-top: -20px;
+section article div{
+  width: 100%; height: 100%; background-color: blue;
+  opacity: 0.4; position: absolute; top: 0; left: 0;
 }
 
-section .box1{
-  background-color: pink;
-  left: 4vw;
+.box2 div{
+  transform: translateX(50px);
 }
-section .box2{
-  background-color: lightblue;
-  right: 4vw;
+.box3 div{
+  transform: translateY(50px);
 }
-section::after{
-  content: '';
-  display: block;
-  width: calc(100% - (4vw + 100px + 4vw) - (4vw + 100px + 4vw));
-  height: 1px;
-  background-color: #555;
-  position: absolute;
-  top: 50%;
-  left: calc(4vw + 100px + 4vw);
+.box4 div{
+  transform: translate(50px, 50px);
+}
+.box5 div{
+  transform: scaleX(1.2);
+}
+.box6 div{
+  transform: scaleY(1.2);
+}
+.box7 div{
+  transform: scale(1.5);
+}
+.box8 div{
+  transform: skewX(-45deg);
+}
+.box9 div{
+  transform: skewY(45deg);
+}
+.box10 div{
+  transform: skew(20deg,20deg);
+}
+.box11 div{
+  transform: rotate(-30deg);
+}
+.box12 div{
+  transform: translateX(50px) rotate(20deg);
+}
+.box13 div{
+  transform: rotate(20deg) translateX(50px);
+}
+.box14 div{
+  transform: translate(150px) rotate(30deg)
+}
+.box15 div{
+  transform: rotate(10deg);
 }
