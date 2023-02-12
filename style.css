@@ -1,62 +1,85 @@
 @charset "UTF-8";
 
-*{ margin: 0px; padding: 0px; box-sizing: border-box;}
-ul,ol,li{ list-style: none;}
-a{ text-decoration: none;}
+*{
+  margin: 0px; padding: 0px; box-sizing: border-box;
+}
+ul,ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/*
+transition
+-css속성을 변경 할때, 무션이나 애미메이션 속도를 조절하는 방법
+즉, 속성 변경이 즉시 일어나는것이 아니라 변화가 일정시간에 걸쳐서 일어 나도록 한다 
+
+적용 가능 속성 
+
+위치 - top, left등 좌표
+크기 - width,height
+박스의 속성 - margin, padding
+테두리 - color, background
+투명도 - opacity
+변환속성 - transform
+
+transition-property 어떤 속성을 변형할지를 지정
+보통(디폴트)은 all지정하고 상황에 따라서 특정 속성을 입력 
+
+transition-duration 몇초동안 재생 할지를 지정
+
+transition-timing-function 가속도 
+http://cubic-bezier.com
+
+linear : 처음부터 끝까지 일정한 속도 
+ease :천천히 시작되어서 그다음에는 빨라지고 마지막은 다시 느려지는것 
+ease-in :효과가 천천히 시작하는것
+ease-out : 효과가 천천히 끝나는것
+ease-in-out : 효과가 천천히 시작해서 천천히 끝나는것 
+
+transition-delay 이벤트가 몇초후에 재생할지 딜레이를 걸어주는것 
+*/
 
 section{
   width: 100%;
+  padding: 100px 0;
+  background: #efefef;
 }
-section article {
-  width: 200px; height: 200px;
-  border: 5px solid #000;
-  float: left; margin: 100px; position: relative;
+section .wrap{
+  width: 1180px; margin: 0 auto;
 }
-
-section article div{
-  width: 100%; height: 100%; background-color: blue;
-  opacity: 0.4; position: absolute; top: 0; left: 0;
+section .wrap::after{
+  content: ''; display: block; clear: both;
 }
 
-.box2 div{
-  transform: translateX(50px);
+section .wrap article{
+  width: 280px; height: 120px; margin-right: 20px;
+  background-color: orange;float: left;
+  opacity: 0;
+  border-radius: 0px;
+  transform: translateY(100px);
+  transition-property: all;
+  transition-duration: 1s;
+  transition: all 3s;
 }
-.box3 div{
-  transform: translateY(50px);
+section .wrap article:last-child{margin-right: 0px;}
+/* section에 마우스를 올렸을때, 그때의 article은? */
+section:hover article{
+  opacity: 1;
+  border-radius: 20px;
+  background-color: pink;
+  height: 150px;
+  transform: translateY(0px)
 }
-.box4 div{
-  transform: translate(50px, 50px);
+section article:nth-of-type(1){
+  transition: 0s;
 }
-.box5 div{
-  transform: scaleX(1.2);
+section article:nth-of-type(2){
+  transition: 0.3s;
 }
-.box6 div{
-  transform: scaleY(1.2);
+section article:nth-of-type(3){
+  transition: 0.6s;
 }
-.box7 div{
-  transform: scale(1.5);
-}
-.box8 div{
-  transform: skewX(-45deg);
-}
-.box9 div{
-  transform: skewY(45deg);
-}
-.box10 div{
-  transform: skew(20deg,20deg);
-}
-.box11 div{
-  transform: rotate(-30deg);
-}
-.box12 div{
-  transform: translateX(50px) rotate(20deg);
-}
-.box13 div{
-  transform: rotate(20deg) translateX(50px);
-}
-.box14 div{
-  transform: translate(150px) rotate(30deg)
-}
-.box15 div{
-  transform: rotate(10deg);
+section article:nth-of-type(4){
+  transition: 0.9s;
 }
