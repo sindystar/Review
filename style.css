@@ -1,12 +1,25 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+
+
+h2 + ul {
+  background-color: orange;
 }
-a{
-  list-style: none;
+
+h2 ~ ul{
+  color: #fff;
+}
+input[type="email"]{
+  background: red;
+}
+
+a[target]{
+  text-decoration: none;
+}
+
+a[target="_blank"]{
+  font-size: 30px;
+}
+h2[class^="main"]{
+  color: blue;
 }
