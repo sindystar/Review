@@ -5,52 +5,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>form 태그</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- 형제선택자 -->
-  <h1>선택자</h1>
-  <ul>
-    <li>menu1</li>
-    <li>menu2</li>
-    <li>menu3</li>
-  </ul>
+  <form action="index.html" method="get">
+    <!-- method - get :주소에 데이터를 추가하여 전달 하는 방식 
+          post : 데이터를 별도로 첨부해서 전달 하는 방식 -->
 
-  <h2>main</h2>
+    <!-- 결과를 보여줄 페이지를 action에다 넣어 준다  -->
+    <label for="name">이름</label>
+    <input type="text" name="userName" id="name">
 
-  <ul>
-    <li>menu1</li>
-    <li>menu2</li>
-    <li>menu3</li>
-  </ul>
+    <label for="pwd">비밀번호</label>
+    <input type="password" name="password1" id="pwd">
 
-  <h3>title</h3>
+    <label for="repwd">비밀번호 재입력</label>
+    <input type="password" name="password2" id="repwd">
 
-  <ul>
-    <li>menu1</li>
-    <li>menu2</li>
-    <li>menu3</li>
-  </ul>
+    <input type="checkbox" name="" id=""><label for="">게임</label>
+    <input type="radio" name="" id=""><label for="">남자</label>
 
-  <form action="">
-    <input type="text" placeholder="name">
-    <input type="email" name="" id="" placeholder="email">
+    <select name="" id="">
+      <option value="">선택하세요</option>
+      <option value="">30살</option>
+    </select>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <input type="reset" value="취소">
+    <input type="submit" value="제출">
   </form>
-
-  <a href="">link</a>
-
-  <a href="http://" target="_blank">naver</a>
-  <a href="" target="_self">daum</a>
-  <a href="" target="_blank">gggg</a>
-
-  <h2 class="main_text1">title1</h2>
-  <h2 class="main_text2">title2</h2>
-  <h2 class="main_index2">title\5</h2>
-  <h2 class="content">title3</h2>
-
-
 </body>
 
 </html>
