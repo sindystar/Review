@@ -5,38 +5,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>form 태그</title>
-  <link rel="stylesheet" href="style.css">
+  <title>아코디언 메뉴</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <form action="index.html" method="get">
-    <!-- method - get :주소에 데이터를 추가하여 전달 하는 방식 
-          post : 데이터를 별도로 첨부해서 전달 하는 방식 -->
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="tab">
+      <input type="radio" name="acc" id="acc1">
+      <label for="acc1">
+        <h2>01</h2>
+        <h3>How do I apply?</h3>
+      </label>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis debitis, ipsa eligendi eos consequatur amet
+          nesciunt! Quam amet rerum voluptatem, minus eaque optio totam quisquam aut suscipit officiis quos quod.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odit, doloribus ipsa reiciendis nobis
+          expedita possimus laudantium illo suscipit quisquam atque beatae blanditiis quod. Iste, totam. Suscipit quae
+          asperiores quas sunt accusantium porro rem, laborum aliquid quis deleniti deserunt nihil.
+        </p>
+      </div>
+    </div>
+    <div class="tab">
+      <input type="radio" name="acc" id="acc2">
+      <label for="acc2">
+        <h2>02</h2>
+        <h3>How do I apply?</h3>
+      </label>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum perspiciatis, reprehenderit
+          dolores est numquam porro, neque deserunt expedita optio ea quas sunt, inventore eius tenetur! Iusto ducimus
+          libero et.</p>
+      </div>
+    </div>
 
-    <!-- 결과를 보여줄 페이지를 action에다 넣어 준다  -->
-    <label for="name">이름</label>
-    <input type="text" name="userName" id="name">
+    <div class="tab">
+      <input type="radio" name="acc" id="acc3">
+      <label for="acc3">
+        <h2>03</h2>
+        <h3>How di I apply?</h3>
+      </label>
+      <div class="content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illum, nostrum quae facere eligendi,
+          mollitia excepturi voluptate sint quo quod dolorem aperiam. Animi eius labore laudantium eaque beatae aperiam
+          est in, illo sequi quas atque dolorem tempora dolor molestiae alias inventore ducimus facilis amet aspernatur,
+          consectetur dolore suscipit id placeat. Eos, maiores at in velit nobis molestiae soluta accusamus aliquam
+          quibusdam illo molestias perspiciatis adipisci libero quia ullam impedit laborum quisquam nihil labore
+          architecto? Voluptas molestias eveniet sed similique. Quae fugit, eos ipsa placeat facilis quo? Ullam
+          temporibus, tenetur, cupiditate illum excepturi asperiores dolores hic a neque iste consectetur maiores.</p>
+      </div>
+    </div>
 
-    <label for="pwd">비밀번호</label>
-    <input type="password" name="password1" id="pwd">
-
-    <label for="repwd">비밀번호 재입력</label>
-    <input type="password" name="password2" id="repwd">
-
-    <input type="checkbox" name="" id=""><label for="">게임</label>
-    <input type="radio" name="" id=""><label for="">남자</label>
-
-    <select name="" id="">
-      <option value="">선택하세요</option>
-      <option value="">30살</option>
-    </select>
-
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-
-    <input type="reset" value="취소">
-    <input type="submit" value="제출">
-  </form>
+    <div class="tab">
+      <input type="radio" name="acc" id="acc4">
+      <label for="acc4">
+        <h2>04</h2>
+        <h3>How do I apply?</h3>
+      </label>
+      <div class="content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
