@@ -57,7 +57,7 @@ body{
             color: #fff;
           }
         }
-        &:checked ~ .label h2{
+        &:checked ~ label h2{
           width: 100%;
           height: 100%;
           position: absolute;
@@ -96,7 +96,7 @@ body{
           display: flex;
           justify-content: center;
           align-items: center;
-          color: fff;
+          color: #fff;
           font-size: 20px;
           border-radius: 5px;
           margin-right: 10px;
@@ -129,7 +129,7 @@ body{
         background: linear-gradient(135deg, #6b64d1,#1b29e9);
       }
       &:nth-of-type(4) label h2{
-        background: linear-gradient(135deg, #8a1e50, #4d344e);
+        background: linear-gradient(135deg, #8a1e50,#4d344e);
       }
     }
   }
