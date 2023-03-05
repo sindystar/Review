@@ -1,0 +1,39 @@
+@mixin clear {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+/*
+변수 함수 () 안에는 디폴트 값을 적용
+디폴트 값을 설정 하였으면 함수에 $값을 쓰고 변경 값을 쓰면 순서 상관없이 변경가능 
+
+-정의 하기 : @mixin  이름 {css스타일 지정}
+-호출 하기 : @include 이름 
+
+*/
+
+@mixin button(
+  $fontSize: 12px,
+  $color: #fff,
+  $wid:80px,
+  $ht:30px,
+  $bgColor:aqua
+) {
+  display: block;
+  width: $wid;
+  height: $ht;
+  font-size: $fontSize;
+  line-height: $ht;
+  text-align: center;
+  color: $color;
+  background: $bgColor;
+}
+
+@mixin ppp() {
+  font-size: 10px;
+  font-family: "arial";
+  color: $contColor;
+  margin-bottom: 20px;
+}
