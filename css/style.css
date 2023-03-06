@@ -1,10 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 * {
   margin: 0px;
-  padding: 0px;
+  padding: 0pa;
   box-sizing: border-box;
-  font-family: "DM Sans";
 }
 
 ul,
@@ -17,106 +15,57 @@ a {
   text-decoration: none;
 }
 
-/*
-변수 함수 () 안에는 디폴트 값을 적용
-디폴트 값을 설정 하였으면 함수에 $값을 쓰고 변경 값을 쓰면 순서 상관없이 변경가능 
-
--정의 하기 : @mixin  이름 {css스타일 지정}
--호출 하기 : @include 이름 
-
-*/
-/* 
-sass 기본 문법
-
-scss 문법으로 작성된 코드를 실시간으로 일반 css 파일로 변환 하는것이 sass사용한다는 의미
--html 은 css파일만 인식한다
-
-변수 
--자주 변경될만한 값을 특정 공간에 저장해서 해당 값을 필요한 곳에 재활용 할때 만드는것 
-
-$변수명 : 속성값;
-
-nesting중첩 
--html 중첩 구조와 동일하게 scss구조로도 중첩해서 관리 한다 
-
-scss파일 분리 하기 
-- 분리할 scss 구문을 _파일명.scss 로 분리 
-- style.scss 파일에 @import "파일명.scss"; 해준다 
-*/
-body {
+.swiper {
+  width: 600px;
+  height: 300px;
+  border: 1px solid #000;
+  margin: 100px auto;
+  position: relative;
+}
+.swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide.box1 {
   background: pink;
 }
-body .wrap::after {
-  content: "";
-  display: block;
-  clear: both;
+.swiper .swiper-wrapper .swiper-slide.box2 {
+  background: orange;
 }
-body .wrap:hover .item {
-  opacity: 1;
-  transform: translateY(0px);
+.swiper .swiper-wrapper .swiper-slide.box3 {
+  background: lightblue;
 }
-body .wrap .item {
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  background: #555;
+.swiper .swiper-wrapper .swiper-slide.box4 {
+  background: lightgreen;
+}
+.swiper .swiper-wrapper .swiper-slide.box5 {
+  background: violet;
+}
+.swiper .auto {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+.swiper .auto li {
+  width: 80px;
+  height: 20px;
   float: left;
-  box-shadow: 5px 5px 20px #ddd;
-  margin: 40px;
-  padding: 10px;
-  opacity: 0;
-  transform: translateY(100px);
-  transition-duration: 0.5s;
-}
-body .wrap .item:nth-of-type(1) {
-  transition-delay: 0.1s;
-}
-body .wrap .item:nth-of-type(2) {
-  transition-delay: 0.2s;
-}
-body .wrap .item:nth-of-type(3) {
-  transition-delay: 0.3s;
-}
-body .wrap .item:nth-of-type(4) {
-  transition-delay: 0.4s;
-}
-body .wrap .item:nth-of-type(5) {
-  transition-delay: 0.5s;
-}
-body .wrap .item:nth-of-type(6) {
-  transition-delay: 0.6s;
-}
-body .wrap .item:nth-of-type(7) {
-  transition-delay: 0.7s;
-}
-body .wrap .item:nth-of-type(8) {
-  transition-delay: 0.8s;
-}
-body .wrap .item h2 {
-  font-size: 30px;
-  font-family: "arial";
-  color: #fff;
-  margin-bottom: 20px;
-}
-body .wrap .item a {
-  display: block;
-  width: 80px;
-  height: 30px;
-  font-size: 30px;
-  line-height: 30px;
+  margin-right: 20px;
   text-align: center;
   color: #fff;
-  background: red;
+  cursor: pointer;
+  font: 14px/20px "맑은고딕";
 }
-body .wrap .item .btn {
-  display: block;
-  width: 80px;
-  height: 30px;
-  font-size: 12px;
-  line-height: 30px;
-  text-align: center;
-  color: #fff;
+.swiper .auto li.btnStart {
   background: blue;
+}
+.swiper .auto li.btnStop {
+  background: red;
 }
 
 /*# sourceMappingURL=style.css.map */
