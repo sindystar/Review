@@ -5,55 +5,77 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sass 기본 문법 </title>
+  <title>스와이퍼</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-  <!-- .wrap>.item*8>h2{sub Title}+p+a{view} -->
-  <div class="wrap">
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae!</p>
-      <a href="">view</a>
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      ...
     </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae?</p>
-      <a href="">view</a>
-    </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error.</p>
-      <a href="">view</a>
-    </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae.</p>
-      <a href="">view</a>
-      <a href="" class="btn">more</a>
-    </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas!</p>
-      <a href="">view</a>
-    </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia.</p>
-      <a href="">view</a>
-    </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</p>
-      <a href="">view</a>
-    </div>
-    <div class="item">
-      <h2>sub Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi?</p>
-      <a href="">view</a>
-    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <ul class="auto">
+      <li class="btnStart">롤링시작</li>
+      <li class="btnStop">롤링정지</li>
+    </ul>
+
   </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "horizontal", //슬라이드 방향 반대는 vertical
+      spaceBetween: 0, //사이간격
+      sildersPerView: 1, //하나의 화면당 보일 패널 갯수
+      grabCursor: true, //스와이프시 마우스 커서 모양을 주먹 모양으로 변경 
+      loop: true, //슬라이딩 순환의 여부 결정 
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false, //롤링중에 스와이프가 되면 (true:롤링중지, false:롤링계속) 
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      mousewheel: true,
+      keyboard: {
+        enabled: true,
+      },
+    });
+
+    const btnStart = document.querySelector(".btnStart");
+    const btnStop = document.querySelector(".btnStop");
+
+    swiper.autoplay.stop();
+    //페이지 로딩시 자동 롤링이 정지 상태로 시작 
+
+    btnStart.addEventListener("click", () => {
+      swiper.autoplay.start();
+    });
+    btnStop.onClick = function () {
+      swiper.autoplay.stop();
+    }
+  </script>
 </body>
 
 </html>
