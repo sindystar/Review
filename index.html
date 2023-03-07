@@ -25,7 +25,105 @@
       </li>
     </ul>
 
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="img/pic1.png" alt="">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consectetur.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="img/pic2.png" alt="">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, veritatis!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="img/pic3.png" alt="">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, laboriosam?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="img/pic4.png" alt="">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, temporibus.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="img/pic5.png" alt="">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, consectetur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+
   </section>
+  <script>
+    var swiper = new Swiper(".gallery", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-psgination",
+        type: "fraction",
+      },
+      loop: true,
+      spaceBetween: 0,
+      slidesPerView: "auto",
+      speed: 1000, //스와이프 되는 속도
+      centerdSlides: true, //현재 활성화 되어있는 패널을 가운데 정면으로 보여줄지를 결정 
+      grabCursor: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: true,
+      },
+      effect: "coverflow",
+      coverflowEffect: {
+        rotate: 50, //슬라이더 회전각
+        stretch: -100, // 슬라이더 간 거리 
+        depth: 400, //깊이 효과 
+        modifier: 1, //효과 배수 
+        slideShadows: false, //  슬라이더 그림자 
+      }
+    })
+
+    //각각 btnstart 와 btnstop 변수로 저장 
+    const btnStart = document.querySelector(".btnStart");
+    const btnStop = document.querySelector(".btnStop");
+    //btnstart버튼 클릭시, 오토 플레이가 스타트 되도록 
+    btnStart.addEventListener("click", () => {
+      swiper.autoplay.start();
+    });
+    //btnstop버튼 클릭시, 오토 플레이가 스탑 되도록 
+    btnStop.addEventListener("click", () => {
+      swiper.autoplay.stop();
+    })
+  </script>
 </body>
 
 </html>
