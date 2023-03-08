@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>coverflow</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/0ac8b4c1ba.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <section class="gallery">
-    <h1>UX/UI <span>PORTFOLIO</span></h1>
+    <h1>UI/UX <span>PORTFOLIO</span></h1>
 
     <ul class="auto">
       <li class="btnStart">
@@ -31,47 +31,43 @@
           <div class="con">
             <img src="img/pic1.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consectetur.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, alias.</p>
           </div>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="inner">
           <div class="con">
             <img src="img/pic2.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, veritatis!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, alias.</p>
           </div>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="inner">
           <div class="con">
             <img src="img/pic3.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, laboriosam?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, alias.</p>
           </div>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="inner">
           <div class="con">
             <img src="img/pic4.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, temporibus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, alias.</p>
           </div>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="inner">
           <div class="con">
             <img src="img/pic5.png" alt="">
             <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, consectetur.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, alias.</p>
           </div>
         </div>
       </div>
@@ -79,6 +75,7 @@
 
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+
     <div class="swiper-pagination"></div>
 
   </section>
@@ -89,14 +86,14 @@
         prevEl: ".swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-psgination",
+        el: ".swiper-pagination",
         type: "fraction",
       },
       loop: true,
       spaceBetween: 0,
       slidesPerView: "auto",
       speed: 1000, //스와이프 되는 속도
-      centerdSlides: true, //현재 활성화 되어있는 패널을 가운데 정면으로 보여줄지를 결정 
+      centeredSlides: true, //현재 활성화 되어있는 패널을 가운데 정면으로 보여줄지를 결정
       grabCursor: true,
       autoplay: {
         delay: 1000,
@@ -105,21 +102,21 @@
       effect: "coverflow",
       coverflowEffect: {
         rotate: 50, //슬라이더 회전각
-        stretch: -100, // 슬라이더 간 거리 
-        depth: 400, //깊이 효과 
-        modifier: 1, //효과 배수 
-        slideShadows: false, //  슬라이더 그림자 
+        stretch: -100, //슬라이더 간 거리
+        depth: 400,//깊이효과
+        modifier: 1, //효과배수
+        slideShadows: false, // 슬라이더 그림자
       }
     })
 
-    //각각 btnstart 와 btnstop 변수로 저장 
+    //각각 btnstart와 btnstop 변수로 저장
     const btnStart = document.querySelector(".btnStart");
     const btnStop = document.querySelector(".btnStop");
-    //btnstart버튼 클릭시, 오토 플레이가 스타트 되도록 
+    //btnstart버튼 클릭시, 오토플레이가 스타트되도록
     btnStart.addEventListener("click", () => {
       swiper.autoplay.start();
     });
-    //btnstop버튼 클릭시, 오토 플레이가 스탑 되도록 
+    // btnstop버튼 클릭시, 오토픍레이가 스탑도되도록
     btnStop.addEventListener("click", () => {
       swiper.autoplay.stop();
     })
